@@ -153,57 +153,11 @@ body{
     height: auto;
     display: block;
     margin-left: auto;
-<<<<<<< HEAD
-    margin-right: 0;
-}
-
-
-
-
-.apoio {
-    border-radius: 12px;
-    padding: 20px;
-    color: #ddd;
-}
-
-.apoio h3 {
-    margin: 0 0 12px;
-    color: #fff;
-    font-size: 22px;
-}
-
-.apoio p {
-    margin: 0;
-    color: #aaa;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-.pix {
-    margin-top: 18px;
-}
-
-#chavePix {
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    word-break: break-all;
-}
-
-.pix button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #3CB371;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-=======
 margin-right: 0;
 }
->>>>>>> afce5b96d7012ad5451c736859caccc7a458c915
+
+
+
+
+
+

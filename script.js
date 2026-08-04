@@ -84,9 +84,10 @@ results.innerHTML = `
     const data = await response.json();
     
     if (!data.ok || !data.files.length) {
-      status.innerHTML = "Nenhum PDF encontrado.";
-      return;
-    }
+  status.innerHTML = "Nenhum PDF encontrado.";
+  results.innerHTML = "";
+  return;
+}
     
     status.innerHTML = data.files.length + " arquivo(s) encontrado(s).";
     
@@ -98,10 +99,10 @@ results.innerHTML = `
             <div class="card">
                 <h3>${file.name}</h3>
 
-            <button class="cta"
-    onclick="comprarManual('${file.name}','${file.url}')">
-    ABRIR PDF
-</button>
+                <button class="cta"
+                    onclick="openPdf('${file.url}')">
+                    ABRIR PDF
+                </button>
             </div>
             `;
       
@@ -120,13 +121,3 @@ function openPdf(url) {
 }
 
 
-
-function comprarManual(nomePdf, urlPdf) {
-  
-  // Salva qual PDF o cliente quer
-  localStorage.setItem("pdfNome", nomePdf);
-  localStorage.setItem("pdfUrl", urlPdf);
-  
-  // Vai para o checkout da InfinitePay
-  window.location.href = "https://checkout.infinitepay.io/maptork/nx5DKLMGsg";
-}
