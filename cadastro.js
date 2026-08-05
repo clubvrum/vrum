@@ -1,38 +1,18 @@
-const API = "https://script.google.com/macros/s/AKfycbwadtljdewtO__ouXt0BaWtlcGIm4bt_Z4Hv6iKlbBusLjpeI9mw05guVvRtufcCVc/exec";
+const API = "https://script.google.com/macros/s/AKfycbzLeNXVH7v1TRnHtBKOU_ByxT0mmkGV2lCkbevWGPmzBpP_60lAXhTw0KQkX6Fhg1I4/exec";
 
 async function cadastrar() {
 
-  const nome = document.getElementById("nome").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const senha = document.getElementById("senha").value.trim();
-
-  if (!nome || !email || !senha) {
-    alert("Preencha todos os campos.");
-    return;
-  }
-
   const form = new FormData();
-  form.append("nome", nome);
-  form.append("email", email);
-  form.append("senha", senha);
 
-  try {
+  form.append("nome", document.getElementById("nome").value);
+  form.append("email", document.getElementById("email").value);
+  form.append("senha", document.getElementById("senha").value);
 
-    const resposta = await fetch(API, {
-      method: "POST",
-      body: form
-    });
+  const resposta = await fetch(API, {
+    method: "POST",
+    body: form,
+    mode: "no-cors"
+  });
 
-    const dados = await resposta.json();
-
-    alert(dados.mensagem);
-
-    if (dados.ok) {
-      window.location.href = "login.html";
-    }
-
-  } catch (erro) {
-    alert("Erro: " + erro.message);
-  }
-
+  alert("Cadastro enviado.");
 }
