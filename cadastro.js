@@ -1,4 +1,4 @@
-const API = "https://script.google.com/macros/s/AKfycbypTJGoN9Xh8-SOSxVxqlZNm7qIFkUhNKJ0ZearhW5s5pH2gDoisbUDcLrX82o9gpsF/exec";
+const API = "https://script.google.com/macros/s/AKfycbw1aWcS4xWL0nJcEPa1SueaKJf5JRTFmS8bTZojcRnAw1ssIxdbILZ1jPQ284B3b-XK/exec";
 
 async function cadastrar() {
 
